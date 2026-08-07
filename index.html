@@ -2,25 +2,35 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Amelia Mariamal — MSc researcher exploring inhalation science, NGI analysis, bioanalysis and scientific data."
+        content="Amelia Mariamal — MSc researcher exploring inhalation science, Next Generation Impactor analysis, bioanalysis and scientific data."
     >
 
-    <title>Amelia Mariamal | Inhalation Science & Bioanalysis</title>
+    <title>
+        Amelia Mariamal | Inhalation Science & Bioanalysis
+    </title>
+
 
     <style>
 
         :root {
+
             --background: #f4f8f5;
             --surface: #fbfdfb;
             --surface-green: #e8f1eb;
 
             --forest: #173d30;
             --forest-light: #285744;
+
             --sage: #4d8068;
             --sage-light: #b9d3c3;
 
@@ -31,17 +41,21 @@
             --white: #ffffff;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -52,29 +66,41 @@
 
             background: var(--background);
             color: var(--text);
-            line-height: 1.6;
+
+            line-height: 1.65;
         }
+
 
         a {
             color: inherit;
         }
 
-        /* -------------------- NAVIGATION -------------------- */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
+
             position: sticky;
             top: 0;
+
             z-index: 100;
 
-            background: rgba(244, 248, 245, 0.92);
+            background: rgba(244, 248, 245, 0.94);
+
             backdrop-filter: blur(12px);
 
-            border-bottom: 1px solid rgba(214, 227, 218, 0.75);
+            border-bottom: 1px solid var(--border);
         }
 
+
         .nav-inner {
+
             max-width: 1120px;
+
             margin: auto;
+
             padding: 20px 25px;
 
             display: flex;
@@ -82,99 +108,145 @@
             align-items: center;
         }
 
+
         .name {
+
             text-decoration: none;
+
             color: var(--forest);
+
             font-weight: 700;
+
             letter-spacing: -0.02em;
         }
 
+
         .nav-links {
+
             display: flex;
-            align-items: center;
+
             gap: 28px;
         }
 
+
         .nav-links a {
+
             text-decoration: none;
+
             color: var(--text);
+
             font-size: 0.95rem;
+
             transition: color 0.2s ease;
         }
+
 
         .nav-links a:hover {
             color: var(--sage);
         }
 
-        /* -------------------- HERO -------------------- */
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+
             max-width: 1120px;
+
             margin: auto;
 
-            padding: 100px 25px 110px;
+            padding: 105px 25px 115px;
 
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
+
+            grid-template-columns: 1.25fr 0.75fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
+
         .eyebrow {
+
             display: inline-block;
 
             padding: 8px 13px;
+
             margin-bottom: 25px;
 
+            background: var(--surface-green);
+
             border: 1px solid var(--sage-light);
+
             border-radius: 999px;
 
-            background: rgba(255,255,255,0.5);
-
             color: var(--forest-light);
+
             font-size: 0.78rem;
+
             font-weight: 700;
+
             letter-spacing: 0.09em;
+
             text-transform: uppercase;
         }
 
+
         h1 {
+
             max-width: 800px;
 
             color: var(--forest);
 
-            font-size: clamp(3rem, 7vw, 6rem);
+            font-size: clamp(3rem, 7vw, 5.8rem);
+
             line-height: 0.98;
+
             letter-spacing: -0.055em;
 
             margin-bottom: 30px;
         }
 
+
         .hero-text {
+
             max-width: 670px;
 
             color: var(--muted);
-            font-size: 1.2rem;
-            line-height: 1.7;
+
+            font-size: 1.18rem;
+
+            line-height: 1.75;
         }
 
+
         .hero-buttons {
+
             display: flex;
+
             gap: 14px;
+
             flex-wrap: wrap;
 
             margin-top: 35px;
         }
 
+
         .button {
+
             display: inline-block;
 
             padding: 13px 20px;
 
-            border-radius: 8px;
+            border-radius: 9px;
 
             text-decoration: none;
+
             font-weight: 600;
+
             font-size: 0.95rem;
 
             transition:
@@ -182,60 +254,87 @@
                 background 0.2s ease;
         }
 
+
         .button:hover {
             transform: translateY(-2px);
         }
 
+
         .button-primary {
+
             background: var(--forest);
+
             color: var(--white);
         }
+
 
         .button-primary:hover {
             background: var(--forest-light);
         }
 
+
         .button-secondary {
-            border: 1px solid var(--border);
+
             background: var(--surface);
+
             color: var(--forest);
+
+            border: 1px solid var(--border);
         }
 
-        /* -------------------- HERO VISUAL -------------------- */
+
+
+        /* =========================
+           AEROSOL TO CELL VISUAL
+        ========================= */
 
         .science-visual {
+
             position: relative;
 
             width: 100%;
+
             aspect-ratio: 1 / 1;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
         }
 
+
         .visual-glow {
+
             position: absolute;
 
             width: 90%;
+
             height: 90%;
 
-            background: #dcebe2;
             border-radius: 50%;
 
-            filter: blur(50px);
+            background: #dcebe2;
+
+            filter: blur(55px);
+
             opacity: 0.75;
         }
 
+
         .cell {
+
             position: relative;
+
             z-index: 2;
 
             width: 210px;
+
             height: 210px;
 
-            border: 2px solid var(--sage);
             border-radius: 50%;
+
+            border: 2px solid var(--sage);
 
             background:
                 radial-gradient(
@@ -246,361 +345,491 @@
                 );
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
         }
 
+
         .nucleus {
-            width: 75px;
-            height: 75px;
+
+            width: 72px;
+
+            height: 72px;
 
             border-radius: 50%;
 
             background: var(--forest-light);
+
             opacity: 0.85;
         }
 
+
         .particle {
+
             position: absolute;
-            z-index: 4;
+
+            z-index: 3;
 
             border-radius: 50%;
+
             background: var(--sage);
         }
 
+
         .particle-1 {
-            width: 16px;
-            height: 16px;
-            top: 10%;
-            left: 14%;
+
+            width: 17px;
+
+            height: 17px;
+
+            top: 18%;
+
+            left: 8%;
         }
+
 
         .particle-2 {
+
             width: 10px;
+
             height: 10px;
-            top: 24%;
-            left: 5%;
+
+            top: 31%;
+
+            left: 20%;
         }
+
 
         .particle-3 {
-            width: 21px;
-            height: 21px;
-            top: 37%;
-            left: 15%;
+
+            width: 22px;
+
+            height: 22px;
+
+            top: 44%;
+
+            left: 4%;
         }
+
 
         .particle-4 {
-            width: 8px;
-            height: 8px;
-            top: 54%;
-            left: 6%;
+
+            width: 9px;
+
+            height: 9px;
+
+            top: 59%;
+
+            left: 17%;
         }
+
 
         .particle-5 {
-            width: 13px;
-            height: 13px;
-            top: 67%;
-            left: 18%;
+
+            width: 14px;
+
+            height: 14px;
+
+            top: 72%;
+
+            left: 8%;
         }
 
-        .particle-line {
-            position: absolute;
 
-            left: 18%;
-            width: 28%;
-            height: 1px;
 
-            background: linear-gradient(
-                to right,
-                var(--sage-light),
-                transparent
-            );
-
-            opacity: 0.7;
-        }
-
-        .line-1 {
-            top: 25%;
-        }
-
-        .line-2 {
-            top: 41%;
-        }
-
-        .line-3 {
-            top: 57%;
-        }
-
-        /* -------------------- GENERAL SECTIONS -------------------- */
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
+
             max-width: 1120px;
+
             margin: auto;
+
             padding: 90px 25px;
         }
 
+
         .section-label {
+
             color: var(--sage);
+
             font-size: 0.78rem;
+
             font-weight: 700;
+
             letter-spacing: 0.1em;
+
             text-transform: uppercase;
 
             margin-bottom: 12px;
         }
 
+
         h2 {
+
             color: var(--forest);
 
             font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.1;
+
+            line-height: 1.15;
+
             letter-spacing: -0.035em;
 
             margin-bottom: 20px;
         }
 
+
         .section-intro {
-            max-width: 650px;
+
+            max-width: 690px;
+
             color: var(--muted);
-            margin-bottom: 45px;
+
             font-size: 1.05rem;
+
+            margin-bottom: 45px;
         }
 
-        /* -------------------- PATHWAY -------------------- */
+
+
+        /* =========================
+           PATHWAY
+        ========================= */
 
         .pathway {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
 
-            margin-top: 50px;
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 45px;
         }
+
 
         .pathway-item {
-            position: relative;
 
-            padding: 24px;
+            padding: 25px;
 
             background: var(--surface);
+
             border: 1px solid var(--border);
-            border-radius: 12px;
+
+            border-radius: 14px;
         }
 
+
         .pathway-number {
+
             color: var(--sage);
-            font-size: 0.75rem;
+
+            font-size: 0.76rem;
+
             font-weight: 700;
 
             margin-bottom: 15px;
         }
 
+
         .pathway-item h3 {
+
             color: var(--forest);
+
             margin-bottom: 8px;
         }
 
+
         .pathway-item p {
+
             color: var(--muted);
+
             font-size: 0.92rem;
         }
 
-        /* -------------------- CARDS -------------------- */
 
-        .grid {
-            display: grid;
 
-            grid-template-columns:
-                repeat(auto-fit, minmax(230px, 1fr));
-
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--surface);
-
-            border: 1px solid var(--border);
-            border-radius: 14px;
-
-            padding: 30px;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--sage-light);
-        }
-
-        .card-icon {
-            width: 42px;
-            height: 42px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 10px;
-
-            background: var(--surface-green);
-            color: var(--forest);
-
-            margin-bottom: 22px;
-
-            font-size: 1.25rem;
-        }
-
-        .card h3 {
-            color: var(--forest);
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            color: var(--muted);
-        }
-
-        /* -------------------- RESEARCH -------------------- */
+        /* =========================
+           RESEARCH
+        ========================= */
 
         .research-card {
+
             position: relative;
+
             overflow: hidden;
 
+            padding: 55px;
+
             background: var(--forest);
-            color: var(--white);
 
             border-radius: 18px;
-            padding: 55px;
+
+            color: white;
         }
 
+
         .research-card::after {
+
             content: "";
 
             position: absolute;
 
-            width: 300px;
-            height: 300px;
+            width: 320px;
 
-            right: -80px;
-            top: -110px;
+            height: 320px;
+
+            right: -100px;
+
+            top: -130px;
 
             border-radius: 50%;
 
-            background: rgba(184, 211, 195, 0.12);
+            background: rgba(185, 211, 195, 0.12);
         }
 
+
         .research-type {
+
             color: #a9cbb9;
 
             font-size: 0.78rem;
+
             font-weight: 700;
+
             letter-spacing: 0.1em;
+
             text-transform: uppercase;
 
             margin-bottom: 16px;
         }
 
+
         .research-card h3 {
-            max-width: 700px;
+
+            max-width: 760px;
 
             font-size: clamp(1.6rem, 3vw, 2.4rem);
+
             line-height: 1.2;
 
             margin-bottom: 20px;
         }
 
+
         .research-card p {
-            max-width: 760px;
+
+            max-width: 780px;
 
             color: #d9e7df;
 
             font-size: 1.05rem;
         }
 
-        /* -------------------- LEARN -------------------- */
 
-        .learn-card {
-            min-height: 220px;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        /* =========================
+           LEARN CARDS
+        ========================= */
+
+        .learn-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
         }
 
+
+        .learn-card {
+
+            min-height: 260px;
+
+            padding: 30px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+
+            border-radius: 15px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition:
+                transform 0.22s ease,
+                border-color 0.22s ease;
+        }
+
+
+        .learn-card:hover {
+
+            transform: translateY(-5px);
+
+            border-color: var(--sage-light);
+        }
+
+
+        .article-link {
+
+            text-decoration: none;
+
+            color: inherit;
+
+            display: block;
+        }
+
+
         .learn-tag {
+
             color: var(--sage);
+
             font-size: 0.75rem;
+
             font-weight: 700;
+
             text-transform: uppercase;
+
             letter-spacing: 0.08em;
         }
 
+
         .learn-card h3 {
+
+            color: var(--forest);
+
             font-size: 1.3rem;
-            margin-top: 25px;
+
+            line-height: 1.3;
+
+            margin: 24px 0 12px;
         }
 
-        .coming-soon {
+
+        .learn-card p {
+
+            color: var(--muted);
+        }
+
+
+        .read-more {
+
             margin-top: 30px;
 
-            color: var(--sage);
-            font-size: 0.85rem;
+            color: var(--sage) !important;
+
+            font-size: 0.9rem;
+
+            font-weight: 700;
+        }
+
+
+        .coming-soon {
+
+            margin-top: 30px;
+
+            color: #899b92 !important;
+
+            font-size: 0.88rem;
+
             font-weight: 600;
         }
 
-        /* -------------------- CONNECT -------------------- */
+
+
+        /* =========================
+           CONNECT
+        ========================= */
 
         .connect-box {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
-            gap: 40px;
+
+            gap: 50px;
 
             padding: 50px;
 
             background: var(--surface-green);
+
             border: 1px solid var(--border);
+
             border-radius: 18px;
         }
 
-        .connect-box p {
-            max-width: 600px;
+
+        .connect-copy {
+
+            max-width: 620px;
+        }
+
+
+        .connect-copy p {
+
             color: var(--muted);
         }
 
+
         .social-links {
+
             display: flex;
+
             flex-wrap: wrap;
-            gap: 10px;
+
+            gap: 12px;
         }
 
+
         .social-links a {
+
             text-decoration: none;
 
-            padding: 11px 16px;
+            padding: 12px 18px;
+
+            border-radius: 9px;
+
+            border: 1px solid var(--border);
 
             background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
 
             color: var(--forest);
+
             font-weight: 600;
-            font-size: 0.9rem;
 
             transition:
                 transform 0.2s ease,
                 border-color 0.2s ease;
         }
 
+
         .social-links a:hover {
+
             transform: translateY(-2px);
+
             border-color: var(--sage);
         }
 
-        /* -------------------- FOOTER -------------------- */
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+
             max-width: 1120px;
+
             margin: auto;
 
             padding: 35px 25px 55px;
@@ -608,37 +837,59 @@
             border-top: 1px solid var(--border);
 
             color: var(--muted);
+
             font-size: 0.9rem;
 
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
         }
 
-        /* -------------------- RESPONSIVE -------------------- */
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 850px) {
 
             .hero {
+
                 grid-template-columns: 1fr;
-                padding-top: 75px;
             }
 
+
             .science-visual {
+
                 max-width: 400px;
+
                 margin: auto;
             }
 
+
             .pathway {
+
                 grid-template-columns: repeat(2, 1fr);
             }
 
+
+            .learn-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
             .connect-box {
+
                 flex-direction: column;
+
                 align-items: flex-start;
             }
 
         }
+
 
         @media (max-width: 650px) {
 
@@ -646,42 +897,65 @@
                 display: none;
             }
 
+
             .hero {
-                padding-bottom: 75px;
+
+                padding-top: 70px;
+
+                padding-bottom: 80px;
             }
+
 
             .science-visual {
-                max-width: 310px;
+
+                max-width: 300px;
             }
+
 
             .cell {
-                width: 170px;
-                height: 170px;
+
+                width: 165px;
+
+                height: 165px;
             }
+
 
             .nucleus {
-                width: 60px;
-                height: 60px;
+
+                width: 58px;
+
+                height: 58px;
             }
 
+
             section {
+
                 padding-top: 65px;
+
                 padding-bottom: 65px;
             }
 
+
             .pathway {
+
                 grid-template-columns: 1fr;
             }
 
+
             .research-card {
+
                 padding: 35px 28px;
             }
+
 
             .connect-box {
+
                 padding: 35px 28px;
             }
 
+
             footer {
+
                 flex-direction: column;
             }
 
@@ -692,24 +966,43 @@
 </head>
 
 
+
 <body>
 
-    <!-- NAVIGATION -->
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
     <nav>
 
         <div class="nav-inner">
 
-            <a class="name" href="#">
+            <a
+                class="name"
+                href="#"
+            >
                 Amelia Mariamal
             </a>
 
+
             <div class="nav-links">
 
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#learn">Learn</a>
-                <a href="#connect">Connect</a>
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#research">
+                    Research
+                </a>
+
+                <a href="#learn">
+                    Learn
+                </a>
+
+                <a href="#connect">
+                    Connect
+                </a>
 
             </div>
 
@@ -718,9 +1011,13 @@
     </nav>
 
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <header class="hero">
+
 
         <div>
 
@@ -728,16 +1025,20 @@
                 MSc Researcher • Inhalation Science
             </span>
 
+
             <h1>
                 From aerosol to biological response.
             </h1>
 
+
             <p class="hero-text">
-                Exploring how inhaled particles move from aerodynamic
-                characterisation and deposition toward biological
-                interpretation — through inhalation science,
-                bioanalysis and scientific data.
+
+                Exploring the connection between inhalation science,
+                aerodynamic particle characterisation, biological
+                analysis and scientific data interpretation.
+
             </p>
+
 
             <div class="hero-buttons">
 
@@ -747,6 +1048,7 @@
                 >
                     Explore my research
                 </a>
+
 
                 <a
                     class="button button-secondary"
@@ -760,11 +1062,10 @@
         </div>
 
 
-        <!-- Scientific visual -->
 
         <div
             class="science-visual"
-            aria-label="Illustration representing aerosol particles moving toward a biological cell"
+            aria-label="A stylised illustration representing aerosol particles approaching a biological cell"
         >
 
             <div class="visual-glow"></div>
@@ -775,170 +1076,151 @@
             <span class="particle particle-4"></span>
             <span class="particle particle-5"></span>
 
-            <span class="particle-line line-1"></span>
-            <span class="particle-line line-2"></span>
-            <span class="particle-line line-3"></span>
 
             <div class="cell">
+
                 <div class="nucleus"></div>
+
             </div>
 
         </div>
 
+
     </header>
 
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section id="about">
+
 
         <p class="section-label">
             My focus
         </p>
 
+
         <h2>
-            Connecting physical aerosol analysis with biology.
+            Connecting aerosol analysis with biological relevance.
         </h2>
 
+
         <p class="section-intro">
-            My interests sit at the intersection of aerosol
-            characterisation, pharmaceutical inhalation science,
+
+            My interests sit at the intersection of pharmaceutical
+            inhalation science, aerosol characterisation,
             biological analysis and quantitative interpretation.
+
         </p>
+
 
 
         <div class="pathway">
 
+
             <div class="pathway-item">
 
-                <p class="pathway-number">01</p>
+                <p class="pathway-number">
+                    01
+                </p>
 
-                <h3>Aerosol</h3>
+                <h3>
+                    Aerosol
+                </h3>
 
                 <p>
-                    Understanding the behaviour and properties
+
+                    Understanding the aerodynamic behaviour
                     of inhaled particles.
+
                 </p>
 
             </div>
 
 
+
             <div class="pathway-item">
 
-                <p class="pathway-number">02</p>
+                <p class="pathway-number">
+                    02
+                </p>
 
-                <h3>Deposition</h3>
+                <h3>
+                    Deposition
+                </h3>
 
                 <p>
-                    Characterising aerodynamic particle-size
-                    distribution using cascade impaction.
+
+                    Characterising particle-size distribution
+                    using cascade impaction.
+
                 </p>
 
             </div>
 
 
+
             <div class="pathway-item">
 
-                <p class="pathway-number">03</p>
+                <p class="pathway-number">
+                    03
+                </p>
 
-                <h3>Biology</h3>
+                <h3>
+                    Biology
+                </h3>
 
                 <p>
+
                     Exploring biologically relevant responses
-                    following particle deposition.
+                    following aerosol deposition.
+
                 </p>
 
             </div>
 
 
+
             <div class="pathway-item">
 
-                <p class="pathway-number">04</p>
+                <p class="pathway-number">
+                    04
+                </p>
 
-                <h3>Data</h3>
+                <h3>
+                    Data
+                </h3>
 
                 <p>
+
                     Turning experimental measurements into
                     interpretable scientific evidence.
+
                 </p>
 
             </div>
+
 
         </div>
 
-
-        <div
-            class="grid"
-            style="margin-top: 40px;"
-        >
-
-            <div class="card">
-
-                <div class="card-icon">◌</div>
-
-                <h3>Aerosol Science</h3>
-
-                <p>
-                    Aerodynamic particle behaviour, inhaled drug
-                    delivery and deposition.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">↓</div>
-
-                <h3>NGI Analysis</h3>
-
-                <p>
-                    Cascade impaction, APSD and quantitative
-                    interpretation of stage deposition.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">◎</div>
-
-                <h3>Bioanalysis</h3>
-
-                <p>
-                    Connecting particle characterisation with
-                    biologically relevant measurements.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">⌁</div>
-
-                <h3>Scientific Data</h3>
-
-                <p>
-                    Data analysis, visualisation, statistics
-                    and reproducible scientific workflows.
-                </p>
-
-            </div>
-
-        </div>
 
     </section>
 
 
-    <!-- RESEARCH -->
+
+    <!-- =========================
+         RESEARCH
+    ========================== -->
 
     <section id="research">
+
 
         <p class="section-label">
             Current research
         </p>
+
 
         <h2>
             Master's research
@@ -947,75 +1229,115 @@
 
         <div class="research-card">
 
+
             <p class="research-type">
-                Inhalation Science • Bioanalysis
+                Inhalation Science • NGI • Bioanalysis
             </p>
 
+
             <h3>
+
                 Exploring biological analysis within the
                 Next Generation Impactor workflow.
+
             </h3>
 
+
             <p>
+
                 My research investigates the incorporation of biological
                 analysis into experiments involving the Next Generation
                 Impactor, with the aim of connecting aerodynamic aerosol
                 characterisation with biological interpretation.
+
             </p>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- LEARN -->
+
+    <!-- =========================
+         LEARN
+    ========================== -->
 
     <section id="learn">
+
 
         <p class="section-label">
             Learn
         </p>
 
+
         <h2>
             Making inhalation science easier to understand.
         </h2>
 
+
         <p class="section-intro">
-            As this platform develops, I'll share accessible explanations
-            of the analytical methods, concepts and data behind
-            inhalation research.
+
+            I'm developing this section as an educational resource
+            for understanding the methods, terminology and data used
+            in pharmaceutical aerosol and biological analysis.
+
         </p>
 
 
-        <div class="grid">
 
-            <article class="card learn-card">
+        <div class="learn-grid">
 
-                <div>
 
-                    <span class="learn-tag">
-                        NGI Fundamentals
-                    </span>
+            <!-- CLICKABLE NGI ARTICLE -->
 
-                    <h3>
-                        What is a Next Generation Impactor?
-                    </h3>
+            <a
+                href="ngi.html"
+                class="article-link"
+            >
 
-                    <p>
-                        An introduction to cascade impaction
-                        and aerodynamic particle-size analysis.
+                <article class="learn-card">
+
+
+                    <div>
+
+                        <span class="learn-tag">
+                            NGI Fundamentals
+                        </span>
+
+
+                        <h3>
+                            What is a Next Generation Impactor?
+                        </h3>
+
+
+                        <p>
+
+                            An introduction to cascade impaction,
+                            aerodynamic particle-size distribution
+                            and inertial impaction.
+
+                        </p>
+
+                    </div>
+
+
+                    <p class="read-more">
+                        Read article →
                     </p>
 
-                </div>
 
-                <p class="coming-soon">
-                    Article coming soon →
-                </p>
+                </article>
 
-            </article>
+            </a>
 
 
-            <article class="card learn-card">
+
+            <!-- MMAD -->
+
+            <article class="learn-card">
+
 
                 <div>
 
@@ -1023,25 +1345,35 @@
                         Aerosol Analysis
                     </span>
 
+
                     <h3>
                         Understanding MMAD
                     </h3>
 
+
                     <p>
+
                         What mass median aerodynamic diameter
                         can tell us about an inhaled aerosol.
+
                     </p>
 
                 </div>
 
+
                 <p class="coming-soon">
-                    Article coming soon →
+                    Article coming soon
                 </p>
+
 
             </article>
 
 
-            <article class="card learn-card">
+
+            <!-- BEYOND DEPOSITION -->
+
+            <article class="learn-card">
+
 
                 <div>
 
@@ -1049,55 +1381,76 @@
                         Bioanalysis
                     </span>
 
+
                     <h3>
                         Beyond deposition
                     </h3>
 
+
                     <p>
-                        Why understanding where particles deposit
-                        is only part of understanding their
-                        biological behaviour.
+
+                        Why understanding where an aerosol deposits
+                        is only part of understanding its biological
+                        behaviour.
+
                     </p>
 
                 </div>
 
+
                 <p class="coming-soon">
-                    Article coming soon →
+                    Article coming soon
                 </p>
+
 
             </article>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- CONNECT -->
+
+    <!-- =========================
+         CONNECT
+    ========================== -->
 
     <section id="connect">
 
+
         <div class="connect-box">
 
-            <div>
+
+            <div class="connect-copy">
+
 
                 <p class="section-label">
                     Connect
                 </p>
 
+
                 <h2>
                     Follow the journey.
                 </h2>
 
+
                 <p>
+
                     I'm building this platform alongside my research
                     to share what I'm learning about inhalation science,
-                    bioanalysis and scientific data.
+                    bioanalysis, NGI testing and scientific data.
+
                 </p>
+
 
             </div>
 
 
+
             <div class="social-links">
+
 
                 <a
                     href="https://github.com/ameliamariamal"
@@ -1107,7 +1460,6 @@
                     GitHub
                 </a>
 
-               
 
                 <a
                     href="https://www.instagram.com/amelia.bioanalysis/"
@@ -1120,24 +1472,33 @@
 
             </div>
 
+
         </div>
+
 
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
+
 
         <p>
             © 2026 Amelia Mariamal
         </p>
 
+
         <p>
             Inhalation Science • Bioanalysis • Scientific Data
         </p>
 
+
     </footer>
+
 
 </body>
 
