@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="An introduction to the Next Generation Impactor, inertial impaction and aerodynamic particle size analysis in inhalation science."
+    >
+
+    <title>
+        The Next Generation Impactor | Amelia Mariamal
+    </title>
+
+    <style>
+
+        :root {
+            --background: #f4f8f5;
+            --surface: #fbfdfb;
+            --surface-green: #e8f1eb;
+
+            --forest: #173d30;
+            --forest-light: #285744;
+
+            --sage: #4d8068;
+            --sage-light: #b9d3c3;
+
+            --text: #203b31;
+            --muted: #65786f;
+            --border: #d6e3da;
+
+            --white: #ffffff;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            background: rgba(244, 248, 245, 0.94);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .nav-inner {
+            max-width: 1050px;
+            margin: auto;
+            padding: 20px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .name {
+            text-decoration: none;
+            color: var(--forest);
+            font-weight: 700;
+        }
+
+
+        .back-link {
+            text-decoration: none;
+            color: var(--sage);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+
+        .back-link:hover {
+            color: var(--forest);
+        }
+
+
+        /* ARTICLE */
+
+        article {
+            max-width: 850px;
+            margin: auto;
+            padding: 85px 25px 110px;
+        }
+
+
+        .article-label {
+            color: var(--sage);
+
+            font-size: 0.8rem;
+            font-weight: 700;
+
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+
+        h1 {
+            color: var(--forest);
+
+            font-size: clamp(2.8rem, 7vw, 5rem);
+            line-height: 1;
+            letter-spacing: -0.05em;
+
+            margin-bottom: 25px;
+        }
+
+
+        .subtitle {
+            color: var(--muted);
+
+            font-size: 1.25rem;
+            line-height: 1.7;
+
+            max-width: 720px;
+
+            margin-bottom: 50px;
+        }
+
+
+        /* IMAGE */
+
+        figure {
+            margin: 20px 0 60px;
+        }
+
+
+        figure img {
+            display: block;
+
+            width: 100%;
+            max-width: 760px;
+
+            margin: auto;
+            padding: 28px;
+
+            background: var(--white);
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+        }
+
+
+        figcaption {
+            max-width: 760px;
+
+            margin: 12px auto 0;
+
+            color: var(--muted);
+
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+
+        /* ARTICLE TEXT */
+
+        .article-content {
+            max-width: 760px;
+            margin: auto;
+        }
+
+
+        .article-content p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+
+        .article-content h2 {
+            color: var(--forest);
+
+            font-size: 2rem;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+
+            margin: 65px 0 25px;
+        }
+
+
+        .article-content strong {
+            color: var(--forest);
+        }
+
+
+        /* PROCESS */
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin: 40px 0;
+        }
+
+
+        .process-step {
+            padding: 22px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+
+        .step-number {
+            color: var(--sage);
+
+            font-size: 0.75rem;
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+
+        .process-step h3 {
+            color: var(--forest);
+
+            font-size: 1.05rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .process-step p {
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+            margin: 0;
+        }
+
+
+        /* PRINCIPLE BOX */
+
+        .principle-box {
+            margin: 40px 0;
+            padding: 30px;
+
+            background: var(--surface-green);
+
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+
+        .principle-box p {
+            color: var(--forest);
+            font-weight: 600;
+
+            margin-bottom: 12px;
+        }
+
+
+        .principle-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* BEYOND PARTICLE SIZE */
+
+        .beyond {
+            margin-top: 70px;
+            padding: 40px;
+
+            background: var(--forest);
+
+            border-radius: 18px;
+
+            color: var(--white);
+        }
+
+
+        .beyond h2 {
+            color: var(--white);
+            margin-top: 0;
+        }
+
+
+        .beyond p {
+            color: #dbe8e0;
+        }
+
+
+        .questions {
+            display: grid;
+            gap: 10px;
+
+            margin: 28px 0;
+        }
+
+
+        .question {
+            padding: 14px 18px;
+
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 10px;
+
+            color: #e4eee8;
+        }
+
+
+        .big-question {
+            margin-top: 35px;
+            padding-top: 30px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+
+        .big-question span {
+            display: block;
+
+            color: #a9cbb9;
+
+            font-size: 0.8rem;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+
+            margin-bottom: 8px;
+        }
+
+
+        .big-question strong {
+            color: var(--white);
+            font-size: 1.35rem;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            max-width: 1050px;
+
+            margin: auto;
+            padding: 35px 25px 55px;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            article {
+                padding-top: 60px;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+
+            figure img {
+                padding: 15px;
+            }
+
+            .beyond {
+                padding: 30px 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="nav-inner">
+
+            <a
+                class="name"
+                href="index.html"
+            >
+                Amelia Mariamal
+            </a>
+
+            <a
+                class="back-link"
+                href="index.html#learn"
+            >
+                ← Back to Learn
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ARTICLE -->
+
+    <article>
+
+
+        <header>
+
+            <p class="article-label">
+                NGI Fundamentals • Inhalation Science
+            </p>
+
+            <h1>
+                The Next Generation Impactor
+            </h1>
+
+            <p class="subtitle">
+                How cascade impaction is used to separate
+                pharmaceutical aerosols according to their
+                aerodynamic particle size.
+            </p>
+
+        </header>
+
+
+
+        <!-- IMAGE -->
+
+        <figure>
+
+            <img
+                src="ngi-biorender.png.png"
+                alt="Schematic illustration of a Next Generation Impactor showing the upper nozzle assembly and lower collection cups"
+            >
+
+            <figcaption>
+                Figure 1. Schematic representation of the
+                Next Generation Impactor (NGI).
+                Created with BioRender.com.
+            </figcaption>
+
+        </figure>
+
+
+
+        <div class="article-content">
+
+
+            <p>
+
+                The <strong>Next Generation Impactor (NGI)</strong>
+                is a cascade impactor widely used to characterise
+                the <strong>aerodynamic particle size distribution
+                (APSD)</strong> of aerosols generated from inhaled
+                and nasal medicinal formulations.
+
+            </p>
+
+
+            <p>
+
+                Aerodynamic particle size is an important property
+                of pharmaceutical aerosols because it influences
+                how particles behave during transport through the
+                respiratory system and where they may ultimately
+                deposit.
+
+            </p>
+
+
+            <p>
+
+                The NGI provides high-resolution separation of an
+                aerosol into different aerodynamic size fractions.
+                Its horizontal configuration also allows convenient
+                access to the individual collection cups, facilitating
+                recovery of deposited material for subsequent
+                gravimetric or chemical analysis.
+
+            </p>
+
+
+
+            <h2>
+                How is the NGI structured?
+            </h2>
+
+
+            <p>
+
+                The NGI contains
+                <strong>seven impaction stages</strong>,
+                commonly referred to as Stages 1–7, followed by a
+                <strong>micro-orifice collector (MOC)</strong>.
+
+            </p>
+
+
+            <p>
+
+                Depending on the formulation and experimental
+                configuration, the system may also include an
+                <strong>induction port</strong> and a
+                <strong>pre-separator</strong> before the aerosol
+                enters the main cascade stages.
+
+            </p>
+
+
+            <p>
+
+                Each stage is designed with a characteristic
+                aerodynamic cut-off diameter. As the aerosol
+                passes through successive stages, particles are
+                progressively separated according to their
+                aerodynamic behaviour.
+
+            </p>
+
+
+            <p>
+
+                The induction port provides a simplified inlet
+                geometry and can retain a substantial proportion
+                of larger material. However, the NGI does
+                <strong>not reproduce the complex anatomical
+                geometry of the human respiratory tract</strong>.
+                It is an analytical instrument designed to
+                characterise aerosol performance rather than a
+                complete physiological model of lung deposition.
+
+            </p>
+
+
+
+            <h2>
+                How does the NGI separate particles?
+            </h2>
+
+
+            <p>
+
+                The NGI operates according to the principle of
+                <strong>inertial impaction</strong>.
+
+            </p>
+
+
+            <p>
+
+                As an aerosol passes through the nozzle arrays of
+                each stage, the airflow is forced to change
+                direction rapidly toward the collection surface.
+
+            </p>
+
+
+            <p>
+
+                Particles with sufficient inertia are unable to
+                follow this rapidly changing airflow and instead
+                impact onto the collection surface. Smaller
+                particles have less inertia and are more capable
+                of remaining entrained within the airflow,
+                allowing them to continue toward subsequent stages.
+
+            </p>
+
+
+
+            <div class="process">
+
+
+                <div class="process-step">
+
+                    <p class="step-number">
+                        01
+                    </p>
+
+                    <h3>
+                        Aerosol enters
+                    </h3>
+
+                    <p>
+                        The aerosol is drawn through the NGI
+                        at a controlled flow rate.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p class="step-number">
+                        02
+                    </p>
+
+                    <h3>
+                        Airflow changes
+                    </h3>
+
+                    <p>
+                        Air passes through the stage nozzles
+                        and changes direction toward the
+                        collection surface.
+                    </p>
+
+                </div>
+
+
+                <div class="process-step">
+
+                    <p class="step-number">
+                        03
+                    </p>
+
+                    <h3>
+                        Particles separate
+                    </h3>
+
+                    <p>
+                        Particles with greater inertia impact
+                        earlier while finer particles continue
+                        downstream.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="principle-box">
+
+                <p>
+                    Larger aerodynamic particles → earlier NGI stages
+                </p>
+
+                <p>
+                    Smaller aerodynamic particles → later NGI stages
+                </p>
+
+                <p>
+                    Very fine remaining particles → terminal MOC
+                </p>
+
+            </div>
+
+
+
+            <h2>
+                What information can we obtain?
+            </h2>
+
+
+            <p>
+
+                Following an NGI experiment, the quantity of drug
+                or material deposited at each location can be
+                determined. The resulting stage-by-stage
+                distribution provides information about the
+                aerodynamic characteristics of the aerosol.
+
+            </p>
+
+
+            <p>
+
+                These data can contribute to parameters such as
+                <strong>mass median aerodynamic diameter
+                (MMAD)</strong>,
+                <strong>geometric standard deviation (GSD)</strong>,
+                <strong>fine particle mass (FPM)</strong> and
+                <strong>fine particle fraction (FPF)</strong>.
+
+            </p>
+
+
+            <p>
+
+                Together, these measurements can be used to compare
+                aerosol formulations, devices and experimental
+                conditions.
+
+            </p>
+
+
+
+            <div class="beyond">
+
+
+                <h2>
+                    Beyond particle size
+                </h2>
+
+
+                <p>
+
+                    The NGI provides detailed information about the
+                    aerodynamic behaviour of an aerosol. However,
+                    knowing where material deposits within an
+                    impactor does not by itself explain what happens
+                    when that material encounters a biological
+                    environment.
+
+                </p>
+
+
+                <div class="questions">
+
+                    <div class="question">
+                        Does the deposited material dissolve?
+                    </div>
+
+                    <div class="question">
+                        Can the drug cross an epithelial barrier?
+                    </div>
+
+                    <div class="question">
+                        Does the formulation influence cell viability
+                        or barrier integrity?
+                    </div>
+
+                    <div class="question">
+                        Could different aerosol fractions produce
+                        different biological responses?
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    Connecting aerodynamic characterisation with
+                    biological analysis may therefore help build a
+                    more complete understanding of an inhaled
+                    formulation.
+
+                </p>
+
+
+                <div class="big-question">
+
+                    <span>
+                        Moving from
+                    </span>
+
+                    <strong>
+                        “Where does the aerosol deposit?”
+                    </strong>
+
+                    <br><br>
+
+                    <span>
+                        toward
+                    </span>
+
+                    <strong>
+                        “What happens after it deposits?”
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </article>
+
+
+
+    <footer>
+
+        © 2026 Amelia Mariamal
+        · Inhalation Science
+        · Bioanalysis
+        · Scientific Data
+
+    </footer>
+
+
+</body>
+
+</html>
