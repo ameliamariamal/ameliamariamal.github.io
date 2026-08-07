@@ -17,8 +17,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f7f9f8;
-            color: #18211f;
+            background: #f3f7f4;
+            color: #19382e;
             line-height: 1.6;
         }
 
@@ -42,13 +42,27 @@
             margin: auto;
             padding: 110px 25px 130px;
         }
+        .hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: #dcebe2;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.55;
+    top: 20px;
+    right: 0;
+    z-index: -1;
 
         .label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            font-weight: bold;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #39745b;
+
         }
 
         h1 {
@@ -61,7 +75,7 @@
         .hero-text {
             max-width: 700px;
             font-size: 1.2rem;
-            color: #53605c;
+            color: #5c7168;
         }
 
         section {
@@ -82,8 +96,8 @@
         }
 
         .card {
-            background: white;
-            border: 1px solid #e1e6e4;
+            background:  #fbfdfb;
+            border: 1px solid #d5e3da;
             border-radius: 12px;
             padding: 30px;
         }
@@ -93,18 +107,18 @@
         }
 
         .card p {
-            color: #596561;
+            color: #60746b;
         }
 
         .feature {
-            background: #18211f;
+            background: #173d30;
             color: white;
             border-radius: 14px;
             padding: 45px;
         }
 
         .feature p {
-            color: #d4dcda;
+            color: #dce9e2;
             max-width: 750px;
             margin-top: 15px;
         }
@@ -113,8 +127,8 @@
             max-width: 1100px;
             margin: auto;
             padding: 60px 25px;
-            border-top: 1px solid #dfe5e2;
-            color: #66716e;
+            border-top: 1px solid #d2e1d8;
+            color: #647a70;
         }
 
         @media (max-width: 700px) {
